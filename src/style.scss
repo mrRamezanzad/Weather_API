@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+head {
+
+    font-size: 10px;
+
+    body {
+        font-size: 1.4rem;
+    }
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #333A3E;
+        width: 100%;
+        height: 80px;
+        margin-bottom: .2rem;
+        box-shadow: 0 0 1px 0 #FFBC01;
+        border-radius: 0 0 10px 10px;
+
+
+        p {
+            margin: 5px;
+            color: #FFBC01;
+            text-shadow: 1px 0 2px #FFBC01;
+            font-size: 1.6rem;
+        }
+
+        .search-list {
+            width: 50%;
+            height: 70%;
+
+            select {
+                width: 100%;
+                height: 90%;
+
+            }
+
+        }
+    }
+
+    main {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media (max-width: 1200px) {
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 33%;
+            height: 290px;
+            margin-bottom: 10px;
+            background: #353A40;
+            border-radius: 5px;
+            margin: 2px;
+            font-size: 1.4rem;
+            box-shadow: 0 0 3px 0 darkgray;
+
+            @media (max-width: 1200px) {
+                width: 49%;
+
+                &.info {
+                    order: 1;
+                }
+
+                &.code {
+                    order: 3;
+                }
+
+                &#flag {
+                    order: 2;
+                }
+
+                &.report {
+                    order: 4;
+                }
+
+
+            }
+
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+
+
+            p {
+                color: white;
+                font-size: 1.6rem;
+            }
+
+            .wrapper {
+                width: 90%;
+                margin: 10px auto;
+                color: white;
+
+                div {
+                    margin: 10px 0;
+                    font-size: 1rem;
+
+                }
+
+            }
+
+            &.code {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                background: #FFBC01;
+                justify-content: space-between;
+                border-radius: 5px;
+
+                .title {
+                    color: white;
+                    width: 100%;
+                    height: 30%;
+                    padding-top: 30px;
+                    border-radius: 5px 5px 0 0;
+                    // @media (max-width: 1200px){
+                    //     padding-bottom: 50px;
+                    // }
+                    text-align: center;
+                    background: #353A40;
+                }
+
+                #calling-code {
+                    width: 100%;
+                    height: 70%;
+                    color: #353A40;
+                    font-size: 4rem;
+                    text-align: center;
+                    padding-top: 50px;
+
+                }
+
+            }
+
+        }
+
+        #flag {
+            background: none;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .report {
+            background: white;
+
+            .title {
+                padding: 10px;
+                background: #353A40;
+                color: white;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+
+            }
+
+            #weather-icon {
+                width: 100px;
+                height: 50px;
+                margin: 3px auto;
+                background-size: cover;
+                background-position: center;
+            }
+
+            #weather-status {
+                text-align: center;
+                padding: 10px;
+                width: 200px;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            span {
+                color: black;
+            }
+
+        }
+
+        #map {
+            order: 5;
+
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+
+            width: 66.3%;
+
+            iframe,
+            iframe>canvas {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+
+
+    }
+
+
+}

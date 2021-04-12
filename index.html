@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./libs/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p>Weather API</p>
+            <div class="search-list">
+                <select id="countries">
+                    <option value="">Country</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <div class="box info">
+                <div class="wrapper">
+                    <p id="country-name">Country Name</p>
+                    <div class="">
+                        <span>Native Name: </span>
+                        <span id="native-name">.....</span>
+                    </div>
+                    <div>
+                        <span>Capital: </span>
+                        <span id="capital">.....</span>
+                    </div>
+                    <div>
+                        <span>Region: </span>
+                        <span id="region">.....</span>
+                    </div>
+                    <div>
+                        <span>Population: </span>
+                        <span id="population">.....</span>
+                    </div>
+                    <div>
+                        <span>Languages: </span>
+                        <span id="language">.....</span>
+                    </div>
+                    <div>
+                        <span>Time Zone: </span>
+                        <span id="time-zone">.....</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box code">
+                <div class="title">CALLING CODE</div>
+                <div id="calling-code">---</div>
+            </div>
+            <div class="box" id="flag"></div>
+            <div class="box report">
+                <div class="title">
+                    CAPITAL WEATHER REPORT
+                </div>
+                <div id="weather-icon"></div>
+                <div id="weather-status">Status</div>
+                <div class="wrapper">
+                    <div>
+                        <span>Wind Speed: </span>
+                        <span id="wind">.....</span>
+                    </div>
+                    <div>
+                        <span>Temperature: </span>
+                        <span id="temperature">.....</span>
+                    </div>
+                    <div>
+                        <span>Humidity: </span>
+                        <span id="humidity">.....</span>
+                    </div>
+                    <div>
+                        <span>Visibility: </span>
+                        <span id="visibility">.....</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Rendering Placeholder -->
+            <div id="map" class="box"></div>
+        </main>
+    </div>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script src="./libs/javascripts/jquery.min.js"></script>
+    <script src="./libs/javascripts/index.js"></script>
+</body>
+
+</html>

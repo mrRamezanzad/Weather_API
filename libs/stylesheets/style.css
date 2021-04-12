@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+head {
+  font-size: 10px;
+}
+head body {
+  font-size: 1.4rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333A3E;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 0 1px 0 #FFBC01;
+  border-radius: 0 0 10px 10px;
+}
+.container header p {
+  margin: 5px;
+  color: #FFBC01;
+  text-shadow: 1px 0 2px #FFBC01;
+  font-size: 1.6rem;
+}
+.container header .search-list {
+  width: 50%;
+  height: 70%;
+}
+.container header .search-list select {
+  width: 100%;
+  height: 90%;
+}
+.container main {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+  .container main {
+    justify-content: space-around;
+  }
+}
+.container main .box {
+  width: 33%;
+  height: 290px;
+  margin-bottom: 10px;
+  background: #353A40;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 1.4rem;
+  box-shadow: 0 0 3px 0 darkgray;
+}
+@media (max-width: 1200px) {
+  .container main .box {
+    width: 49%;
+  }
+  .container main .box.info {
+    order: 1;
+  }
+  .container main .box.code {
+    order: 3;
+  }
+  .container main .box#flag {
+    order: 2;
+  }
+  .container main .box.report {
+    order: 4;
+  }
+}
+@media (max-width: 600px) {
+  .container main .box {
+    width: 100%;
+  }
+}
+.container main .box p {
+  color: white;
+  font-size: 1.6rem;
+}
+.container main .box .wrapper {
+  width: 90%;
+  margin: 10px auto;
+  color: white;
+}
+.container main .box .wrapper div {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+.container main .box.code {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #FFBC01;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.container main .box.code .title {
+  color: white;
+  width: 100%;
+  height: 30%;
+  padding-top: 30px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  background: #353A40;
+}
+.container main .box.code #calling-code {
+  width: 100%;
+  height: 70%;
+  color: #353A40;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 50px;
+}
+.container main #flag {
+  background: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container main .report {
+  background: white;
+}
+.container main .report .title {
+  padding: 10px;
+  background: #353A40;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+.container main .report #weather-icon {
+  width: 100px;
+  height: 50px;
+  margin: 3px auto;
+  background-size: cover;
+  background-position: center;
+}
+.container main .report #weather-status {
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+.container main .report span {
+  color: black;
+}
+.container main #map {
+  order: 5;
+  width: 66.3%;
+}
+@media (max-width: 1200px) {
+  .container main #map {
+    width: 100%;
+  }
+}
+.container main #map iframe,
+.container main #map iframe > canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
